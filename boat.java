@@ -1,18 +1,19 @@
-public class boat
-{
-    public static void main(String[] args)
-    {
-        Boat b = new Boat("4323");
-        String coor[] = {"2","5"};
-        System.out.println(b);
-        System.out.println(b.have_coor(coor));
-        /*System.out.println(b.removePart("23"));
-        System.out.println(b.removePart("24"));
-        System.out.println(b);*/
-    }
-}
 
-class Boat
+// public class boat
+// {
+//     public static void main(String[] args)
+//     {
+//         Boat b = new Boat("4323");
+//         String coor[] = {"2","5"};
+//         System.out.println(b);
+//         System.out.println(b.have_coor(coor));
+//         /*System.out.println(b.removePart("23"));
+//         System.out.println(b.removePart("24"));
+//         System.out.println(b);*/
+//     }
+// }
+
+class boat
 {
     private int parts[][];
     private static int[] boats[][][] = { 
@@ -25,7 +26,7 @@ class Boat
                                         };
     private static int numberOfBoats = 0;
     
-    public Boat(String cord)
+    public boat(String cord)
     {
         parts = buildBoat(cord);
         numberOfBoats++;
@@ -138,6 +139,8 @@ class Boat
 
         return false;
     }
-
+    public int[][] getParts(){
+        return this.parts;
+    }
     
 }
