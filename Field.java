@@ -2,7 +2,12 @@ import java.util.LinkedList;
 public class Field {
     public static void main(String[] args) {
         field f=new field();
-        f.add_boat(new boat("4323"));
+        String a =new String("4323");
+        if (f.possibleInsert(boat.buildBoat(a)))
+            f.add_boat(new boat("4323"));
+        System.out.println(f);
+        if (f.possibleInsert(boat.buildBoat(a)))
+            f.add_boat(new boat("4323"));
         System.out.println(f);
     }
 }
@@ -15,7 +20,7 @@ class field
         this.map=new LinkedList<boat>();
     }
 
-    private boolean possibleInsert(int[][] crd)
+    public boolean possibleInsert(int[][] crd)
     {
         String[] coor = new String[2];
         for(int[] cord: crd){
@@ -53,7 +58,7 @@ class field
     public String toString() {
             String s=new String();
             for (boat var : map) {
-                s+=var.toString()+"YA RBEK";                
+                s+=var.toString();                
             }
             return s;
         }
