@@ -60,7 +60,7 @@ class boat
         Boolean hit = false;
         
         point[0] = Integer.parseInt(String.valueOf(cord.charAt(0))); 
-        point[1] = Integer.parseInt(String.valueOf(cord.charAt(1))); 
+        point[1] = Integer.parseInt(String.valueOf(cord.charAt(2))); 
         for (int i[]:parts)
         {
             if (i[0] == point[0] && i[1] == point[1])

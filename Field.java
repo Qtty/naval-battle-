@@ -9,6 +9,19 @@ public class Field {
         if (f.possibleInsert(boat.buildBoat(a)))
             f.add_boat(new boat("4323"));
         System.out.println(f);
+        int i=-1;
+        String[] s={
+            "2 3", 
+            "2 4", 
+            "3 4", 
+            "1 2",
+            "0 0"}; 
+        do{
+            
+            
+            i++;
+        }while(f.check_game(s[i]));
+        System.out.println(f);
     }
 }
 class field
@@ -69,7 +82,7 @@ class field
         if(map.size()<=0 || babour == null )
                 return false;
             else
-            babour.removePart(s);
+            {babour.removePart(s);System.out.println("ani nektlou terf!");};
         return true;
     }
     public void remove_boat(boat babour){
